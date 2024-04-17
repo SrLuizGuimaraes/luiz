@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite para Débora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-blue {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .button-pink {
+            background-color: #ff69b4;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Debora, tenho um convite para você!</h1>
+        <p>Dois Reais ou um Rolê misterioso?</p>
+        <div class="buttons">
+            <button class="button button-blue" onclick="showMessage('Dois Reais')">Dois Reais</button>
+            <button class="button button-pink" onclick="showMessage('Rolê misterioso')">Rolê misterioso</button>
+        </div>
+    </div>
+    <script>
+        function showMessage(choice) {
+            if (choice === 'Dois Reais') {
+                alert("Resposta errada. Dê uma chance pro nosso rolê 💕");
+            } else if (choice === 'Rolê misterioso') {
+                const confirmation = confirm("Ótima escolha! Você acaba de ter um Date marcado para sábado às 20:00 horas. Confirme seu convite aqui.");
+                if (confirmation) {
+                    window.location.href = "https://wa.me/5531991206495"; // Substitua pelo seu link desejado
+                }
+            }
+        }
+    </script>
+</body>
+</html>
